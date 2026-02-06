@@ -1,4 +1,4 @@
----- MODULE bfs ----
+---- MODULE BFS ----
 \* A TLA+ Module traversal the state space of bfs algorithm described in CLRS
 \* - Cormen, Thomas H, et al. Introduction To Algorithms. India, MIT Press, 2001.
 EXTENDS TLC, Integers, Sequences
@@ -36,6 +36,7 @@ SeqFromSet(S) ==
   ELSE LET x == CHOOSE x \in S : TRUE
        IN  << x >> \o SeqFromSet(S \ {x})
 
+\* TODO: 4.3 Hiding the queue
 WhiteNeighbors(v) == {u \in Adj[v] : color[u] = "WHITE"}
 Next ==
     /\ queue /= <<>>
