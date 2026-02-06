@@ -1,4 +1,4 @@
----- MODULE BFS ----
+---- MODULE Bfs ----
 \* A TLA+ Module traversal the state space of bfs algorithm described in CLRS
 \* - Cormen, Thomas H, et al. Introduction To Algorithms. India, MIT Press, 2001.
 EXTENDS TLC, Integers, Sequences
